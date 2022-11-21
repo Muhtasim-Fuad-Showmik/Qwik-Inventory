@@ -15,22 +15,46 @@
 
 body {
   background-color: #fafafa;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
   padding: 20px 20px 40px 20px;
 }
 
 main {
-  max-width: 760px;
+  width: 100%;
   margin: 0 auto;
   background-color: white;
   border-radius: 5px;
-  box-shadow: 0px 0px 130px -50px var(--qwik-light-purple);
+  box-shadow: 0px 0px 130px -50px var(--qwik-dark-blue);
   overflow: hidden;
 }
 
 h1,
 h2 {
   margin: 0 0 5px 0;
+}
+
+.app-title {
+  font-family: 'Sen', sans-serif;
+  text-decoration: underline;
+  text-decoration-color: white;
+  border: none;
+  color: black;
+  font-weight: 700;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+p {
+  margin: 0;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-direction-col {
+  flex-direction: column;
 }
 
 .lightning {

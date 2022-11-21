@@ -1,7 +1,7 @@
 header {
   display: flex;
   background: white;
-  border-bottom: 10px solid var(--qwik-dark-purple);
+  border-bottom: 6px solid var(--qwik-dark-blue);
 }
 
 header .logo a {
@@ -27,8 +27,4 @@ header li a {
   display: inline-block;
   padding: 15px 10px;
   text-decoration: none;
-}
-
-header li a:hover {
-  text-decoration: underline;
 }
