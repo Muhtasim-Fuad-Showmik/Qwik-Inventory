@@ -9,13 +9,15 @@ interface CardProps {
   value?: number;
   valuePrefix?: string;
   valueHeader?: string;
+  increased?: boolean;
+  increasedByPercentage?: number;
   secondaryTitle?: string;
   secondaryValue?: number;
   secondaryValuePrefix?: string;
   secondaryValueSuffix?: string;
-  olderTitle?: string;
-  olderValue?: number;
-  olderValuePrefix?: string;
+  tertiaryTitle?: string;
+  tertiaryValue?: number;
+  tertiaryValuePrefix?: string;
   olderValueSuffix?: string;
 }
 
@@ -40,8 +42,23 @@ export default component$((props: CardProps) => {
         </div>
 
         <div className="card-value-change-container">
-          <i class="fa-solid fa-arrow-up"></i>
-          <i class="fa-solid fa-arrow-down"></i>
+			{
+				(typeof props.increasedByPercentage !== "undefined") ?
+					(props.increased ? 
+					<span class="card-increment increasing">
+						<i class="fa-solid fa-arrow-up"></i>
+						<span className="card-increment-percent">
+							{`${props.increasedByPercentage}%`}
+						</span>
+					</span> 
+					: <span class="card-increment decreasing">
+						<i class="fa-solid fa-arrow-down"></i>
+						<span className="card-increment-percent">
+							{`${props.increasedByPercentage}%`}
+						</span>
+					</span>)
+					: ''
+			}
         </div>
       </div>
 
@@ -59,12 +76,12 @@ export default component$((props: CardProps) => {
 		</div>
 		<div className="w-50">
 			<p className="secondary-card-title">
-				{props.olderTitle}
+				{props.tertiaryTitle}
 			</p>
 			<p className="secondary-card-value">
-				{`${typeof props.olderValuePrefix !== "undefined" ?
-				props.olderValuePrefix : ''}${typeof props.olderValue !== "undefined" ?
-				props.olderValue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") : ''}${typeof props.olderValueSuffix !== "undefined" ?
+				{`${typeof props.tertiaryValuePrefix !== "undefined" ?
+				props.tertiaryValuePrefix : ''}${typeof props.tertiaryValue !== "undefined" ?
+				props.tertiaryValue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") : ''}${typeof props.olderValueSuffix !== "undefined" ?
 				props.olderValueSuffix : ''}`}
 			</p>
 		</div>

@@ -7,11 +7,6 @@
     padding: 20px;
 }
 
-.card-title {
-    font-size: 20px;
-    font-weight: bold;
-}
-
 .card-icon {
     width: 40px;
     height: 40px;
@@ -22,6 +17,39 @@
     font-size: 20px;
 }
 
+.card-value-change-container {
+    height: 20px;
+    width: 60px;
+    font-size: 12px;
+}
+
+.card-increment {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    padding: 3px;
+}
+
+.card-increment.increasing {
+    background-color: #9ef01a;
+    color: #008000;
+}
+
+.card-increment.decreasing {
+    background-color: #ffccd5;
+    color: #c9184a;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card-value {
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .card-value-container {
     height: 50px;
 }
@@ -29,11 +57,6 @@
 .card-value-header {
     font-size: 11px;
     height: 13px;
-}
-
-.card-value {
-    font-size: 20px;
-    font-weight: bold;
 }
 
 .secondary-card-title {
