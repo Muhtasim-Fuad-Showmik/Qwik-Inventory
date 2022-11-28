@@ -4,4 +4,59 @@
     width: 100%;
     min-height: 100px;
     border-radius: 10px;
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.card-value-container {
+    height: 50px;
+}
+
+.card-value-header {
+    font-size: 11px;
+    height: 13px;
+}
+
+.card-value {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.secondary-card-title {
+    font-size: 13px;
+}
+
+.secondary-card-value {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Themes */
+.lemon-chiffon {
+    background-color: #fbf8cc;
+    color: #423d09;
+}
+
+.winter-wizard {
+    background-color: #8eecf5;
+    color: #053135;
+}
+
+.magic-mint {
+    background-color: #b9fbc0;
+    color: #08360d;
 }
