@@ -1,5 +1,5 @@
-import { component$, useStylesScoped$ } from '@builder.io/qwik';
-import styles from './header.css?inline';
+import { component$, useStylesScoped$ } from "@builder.io/qwik";
+import styles from "./header.css?inline";
 
 export default component$(() => {
   useStylesScoped$(styles);
@@ -9,8 +9,15 @@ export default component$(() => {
       <div class="logo">
         <a href="#" target="_blank">
           <div className="d-flex">
-            <img src="/Inventory Logo.png" alt="Inventory Management Logo" width='40px' />
-            <span class="app-title d-flex flex-direction-col"><p>Inventory</p><p>Management</p></span>
+            <img
+              src="/Inventory Logo.png"
+              alt="Inventory Management Logo"
+              width="40px"
+            />
+            <span class="app-title d-flex flex-direction-col">
+              <p>Inventory</p>
+              <p>Management</p>
+            </span>
           </div>
         </a>
       </div>

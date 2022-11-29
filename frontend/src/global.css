@@ -49,18 +49,6 @@ p {
   margin: 0;
 }
 
-.d-flex {
-  display: flex;
-}
-
-.justify-content-space-between {
-  justify-content: space-between;
-}
-
-.flex-direction-col {
-  flex-direction: column;
-}
-
 section {
   padding: 20px;
   border-bottom: 10px solid var(--qwik-dark-blue);
@@ -112,6 +100,13 @@ footer a:hover {
   text-decoration: underline;
 }
 
+.standard-select {
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Sen', sans-serif;
+}
+
 a.btn {
   display: block;
   padding: 10px 20px;
@@ -139,6 +134,19 @@ a.btn:hover {
 
 .align-items-center {
   align-items: center;
+}
+
+/* Formatting */
+.d-flex {
+  display: flex;
+}
+
+.flex-direction-col {
+  flex-direction: column;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
 }
 
 .mb-20 {

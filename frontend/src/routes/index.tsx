@@ -7,54 +7,67 @@ export default component$(() => {
   return (
     <div class="w-100">
       <div className="p-10">
-		<p class="greeting">Hey Fuad!</p>
-		<h1>Overview</h1>
-	  </div>
+        <p class="greeting">Hey Fuad!</p>
+        <h1>Overview</h1>
+      </div>
 
       <div className="d-flex justify-content-space-between mb-20 w-100 p-10">
-        <Card 
-			style="w-30" 
-			title="Order Insights" 
-			icon="fa-solid fa-clipboard-list"
-			bg="lemon-chiffon"
-			value={62900}
-			valuePrefix="$"
-			increased={true}
-			increasedByPercentage={20}
-			secondaryTitle="Last Month's Order Value"
-			secondaryValue={89333}
-			secondaryValuePrefix="$"
-			tertiaryTitle="Outstanding"
-			tertiaryValue={672000}
-			tertiaryValuePrefix="$"
-		/>
+        <Card
+          style="w-30"
+          title="Order Insights"
+          icon="fa-solid fa-clipboard-list"
+          bg="lemon-chiffon"
+          value={62900}
+          valuePrefix="$"
+          increased={true}
+          increasedByPercentage={20}
+          secondaryTitle="Last Month's Order Value"
+          secondaryValue={89333}
+          secondaryValuePrefix="$"
+          tertiaryTitle="Outstanding"
+          tertiaryValue={672000}
+          tertiaryValuePrefix="$"
+        />
 
-        <Card 
-			style="w-30" 
-			title="Inventory Insights"
-			icon="fa-solid fa-dollar-sign"
-			bg="winter-wizard"
-			value={182900000}
-			valuePrefix="$"
-			valueHeader="Total Stock Value"
-		/>
+        <Card
+          style="w-30"
+          title="Inventory Insights"
+          icon="fa-solid fa-dollar-sign"
+          bg="winter-wizard"
+          value={182900000}
+          valuePrefix="$"
+          valueHeader="Total Stock Value"
+        />
 
-        <Card 
-			style="w-30" 
-			title="CoGS Insights"
-			icon="fa-solid fa-database"
-			bg="magic-mint"
-			value={63400}
-			valuePrefix="$"
-			increased={false}
-			increasedByPercentage={10}
-			secondaryTitle="Cost of Goods Sold %"
-			secondaryValue={89}
-			secondaryValueSuffix=" %"
-			tertiaryTitle="Turn Over"
-			tertiaryValue={675000}
-			tertiaryValuePrefix="$"
-		/>
+        <Card
+          style="w-30"
+          title="CoGS Insights"
+          icon="fa-solid fa-database"
+          bg="magic-mint"
+          value={63400}
+          valuePrefix="$"
+          increased={false}
+          increasedByPercentage={10}
+          secondaryTitle="Cost of Goods Sold %"
+          secondaryValue={89}
+          secondaryValueSuffix=" %"
+          tertiaryTitle="Turn Over"
+          tertiaryValue={675000}
+          tertiaryValuePrefix="$"
+        />
+      </div>
+
+      <div className="p-10">
+        <h1>Report</h1>
+      </div>
+
+      <div className="d-flex justify-content-space-between mb-20 w-100 p-10">
+        <select class="standard-select">
+          <option>Last 7 days</option>
+          <option>Last month</option>
+          <option>Last 6 months</option>
+          <option>Last year</option>
+        </select>
       </div>
 
       <Link class="btn standard" href="/flower">
