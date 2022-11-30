@@ -2,6 +2,7 @@ import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { Link } from "@builder.io/qwik-city";
 import Card from "../components/card/card";
+import ContentCard from "../components/contentCard/contentCard";
 
 export default component$(() => {
   return (
@@ -11,7 +12,7 @@ export default component$(() => {
         <h1>Overview</h1>
       </div>
 
-      <div className="d-flex justify-content-space-between mb-20 w-100 p-10">
+      <div className="row">
         <Card
           style="w-30"
           title="Order Insights"
@@ -61,13 +62,26 @@ export default component$(() => {
         <h1>Report</h1>
       </div>
 
-      <div className="d-flex justify-content-space-between mb-20 w-100 p-10">
+      <div className="row">
         <select class="standard-select">
           <option>Last 7 days</option>
           <option>Last month</option>
           <option>Last 6 months</option>
           <option>Last year</option>
         </select>
+        
+      </div>
+
+      <div className="row">
+        <ContentCard
+          style="w-50"
+          title="Inventory Value per Outlet"
+        />
+
+        <ContentCard
+          style="w-50"
+          title="Monthly Value per Outlet"
+        />
       </div>
 
       <Link class="btn standard" href="/flower">
