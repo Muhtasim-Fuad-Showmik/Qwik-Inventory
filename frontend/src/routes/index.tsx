@@ -74,18 +74,30 @@ export default component$(() => {
 
       <div className="row">
         <ContentCard
-          style="w-50"
+          style="w-47"
           title="Inventory Value per Outlet"
         >
           <div className="highlighted-change-container mt-10">
             <span className="highlighted-change">100%</span>
           </div>
+
+          <div className="graph-container">
+            Graph Placeholder
+          </div>
         </ContentCard>
 
         <ContentCard
-          style="w-50"
+          style="w-47"
           title="Monthly Value per Outlet"
-        />
+        >
+          <div className="highlighted-change-container mt-10">
+            <span className="highlighted-change">100%</span>
+          </div>
+
+          <div className="graph-container">
+            Graph Placeholder
+          </div>
+        </ContentCard>
       </div>
 
       <Link class="btn standard" href="/flower">

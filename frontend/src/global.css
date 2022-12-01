@@ -220,6 +220,11 @@ a.btn:hover {
   max-width: 30%;
 }
 
+.w-47 {
+  width: 47%;
+  max-width: 47%;
+}
+
 .w-50 {
   width: 50%;
   max-width: 50%;
