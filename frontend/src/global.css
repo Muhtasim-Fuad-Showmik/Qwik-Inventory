@@ -34,17 +34,6 @@ h2 {
   margin: 0 0 5px 0;
 }
 
-.app-title {
-  font-family: 'Sen', sans-serif;
-  text-decoration: underline;
-  text-decoration-color: white;
-  border: none;
-  color: black;
-  font-weight: 700;
-  font-size: 20px;
-  margin-left: 20px;
-}
-
 p {
   margin: 0;
 }
@@ -98,6 +87,44 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+/* Custom Classes */
+
+.app-title {
+  font-family: 'Sen', sans-serif;
+  text-decoration: underline;
+  text-decoration-color: white;
+  border: none;
+  color: black;
+  font-weight: 700;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.highlighted-change {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    padding: 3px;
+    background-color: #e4e4e4;
+    color: #464646;
+}
+
+.highlighted-change-container {
+  height: 20px;
+  width: 60px;
+  font-size: 12px;
+}
+
+.highlighted-change.increasing {
+    background-color: #9ef01a;
+    color: #008000;
+}
+
+.highlighted-change.decreasing {
+    background-color: #ffccd5;
+    color: #c9184a;
 }
 
 .row {
@@ -157,6 +184,14 @@ a.btn:hover {
 
 .justify-content-space-between {
   justify-content: space-between;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-20 {
+  margin-top: 20px;
 }
 
 .mb-20 {

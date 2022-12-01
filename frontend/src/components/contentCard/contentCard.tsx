@@ -1,4 +1,5 @@
 import { component$, useStylesScoped$ } from "@builder.io/qwik";
+import { Slot } from '@builder.io/qwik';
 import styles from "./contentCard.css?inline";
 
 interface CardProps {
@@ -12,6 +13,7 @@ export default component$((props: CardProps) => {
   return (
     <div className={`card ${props.style}`}>
       <span className="card-title">{props.title}</span>
+      <Slot />
     </div>
   );
 });

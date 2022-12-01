@@ -45,17 +45,17 @@ export default component$((props: CardProps) => {
           </span>
         </div>
 
-        <div className="card-value-change-container">
+        <div className="highlighted-change-container">
           {typeof props.increasedByPercentage !== "undefined" ? (
             props.increased ? (
-              <span class="card-increment increasing">
+              <span class="highlighted-change increasing">
                 <i class="fa-solid fa-arrow-up"></i>
                 <span className="card-increment-percent">
                   {`${props.increasedByPercentage}%`}
                 </span>
               </span>
             ) : (
-              <span class="card-increment decreasing">
+              <span class="highlighted-change decreasing">
                 <i class="fa-solid fa-arrow-down"></i>
                 <span className="card-increment-percent">
                   {`${props.increasedByPercentage}%`}

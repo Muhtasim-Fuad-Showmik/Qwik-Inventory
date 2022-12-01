@@ -76,7 +76,11 @@ export default component$(() => {
         <ContentCard
           style="w-50"
           title="Inventory Value per Outlet"
-        />
+        >
+          <div className="highlighted-change-container mt-10">
+            <span className="highlighted-change">100%</span>
+          </div>
+        </ContentCard>
 
         <ContentCard
           style="w-50"
