@@ -1,10 +1,14 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useRef } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { Link } from "@builder.io/qwik-city";
 import Card from "../components/card/card";
 import ContentCard from "../components/contentCard/contentCard";
+import ChartJSGraph from "../components/chartJSGraph/chartJSGraph";
 
 export default component$(() => {
+  const leftChartContainer = useRef();
+  const rightChartContainer = useRef();
+
   return (
     <div class="w-100">
       <div className="p-10">
@@ -82,7 +86,18 @@ export default component$(() => {
           </div>
 
           <div className="graph-container">
-            Graph Placeholder
+            <ChartJSGraph
+              data={[
+                { year: 2010, count: 10 },
+                { year: 2011, count: 20 },
+                { year: 2012, count: 15 },
+                { year: 2013, count: 25 },
+                { year: 2014, count: 22 },
+                { year: 2015, count: 30 },
+                { year: 2016, count: 28 },
+              ]}
+              reference={leftChartContainer}
+            />
           </div>
         </ContentCard>
 
@@ -95,7 +110,18 @@ export default component$(() => {
           </div>
 
           <div className="graph-container">
-            Graph Placeholder
+            <ChartJSGraph
+              data={[
+                  { year: 2010, count: 10 },
+                  { year: 2011, count: 20 },
+                  { year: 2012, count: 15 },
+                  { year: 2013, count: 25 },
+                  { year: 2014, count: 22 },
+                  { year: 2015, count: 30 },
+                  { year: 2016, count: 28 },
+                ]}
+              reference={rightChartContainer}
+            />
           </div>
         </ContentCard>
       </div>

@@ -5,10 +5,16 @@ export default component$(() => {
   return (
     <>
       <main>
-        <Header />
-        <section>
-          <Slot />
-        </section>
+        <div className="d-flex flex-direction-row">
+          <div className="leftPane">
+            <Header />
+          </div>
+          <div className="rightPane">
+            <section>
+              <Slot />
+            </section>
+          </div>
+        </div>
       </main>
       <footer>
         <a href="https://peaceful-sable-131357.netlify.app/" target="_blank">

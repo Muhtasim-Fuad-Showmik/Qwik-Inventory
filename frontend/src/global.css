@@ -127,6 +127,15 @@ footer a:hover {
     color: #c9184a;
 }
 
+.leftPane {
+    width: 300px;
+    min-height: 100%;
+}
+
+.rightPane {
+    width: 100%;
+}
+
 .row {
   display: flex;
   justify-content: space-between;
@@ -176,6 +185,10 @@ a.btn:hover {
 
 .d-flex {
   display: flex;
+}
+
+.flex-direction-row {
+  flex-direction: row;
 }
 
 .flex-direction-col {
