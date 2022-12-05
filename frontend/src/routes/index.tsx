@@ -10,7 +10,7 @@ export default component$(() => {
   const rightChartContainer = useRef();
 
   return (
-    <div class="w-100">
+    <div class="w-100 h-100">
       <div className="p-10">
         <p class="greeting">Hey Fuad!</p>
         <h1>Overview</h1>

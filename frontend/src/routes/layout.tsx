@@ -4,12 +4,12 @@ import Header from "../components/header/header";
 export default component$(() => {
   return (
     <>
-      <main>
-        <div className="d-flex flex-direction-row">
-          <div className="leftPane">
+      <main className="h-90vh">
+        <div className="d-flex flex-direction-row h-100">
+          <div className="leftPane h-100">
             <Header />
           </div>
-          <div className="rightPane">
+          <div className="rightPane h-100">
             <section>
               <Slot />
             </section>

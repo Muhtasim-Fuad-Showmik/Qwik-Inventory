@@ -7,7 +7,7 @@ export default component$(() => {
   return (
     <header>
       <div class="logo">
-        <a href="#" target="_blank">
+        <a href="/">
           <div className="d-flex">
             <img
               src="/Inventory Logo.png"
@@ -23,27 +23,27 @@ export default component$(() => {
       </div>
       <ul>
         <li>
-          <a href="#" target="_blank">
+          <a href="/">
             Dashboard
           </a>
         </li>
         <li>
-          <a href="#" target="_blank">
+          <a href="#">
             Products
           </a>
         </li>
         <li>
-          <a href="#" target="_blank">
+          <a href="/procurement">
             Procurement
           </a>
         </li>
         <li>
-          <a href="#" target="_blank">
+          <a href="#">
             Inventory
           </a>
         </li>
         <li>
-          <a href="#" target="_blank">
+          <a href="#">
             Analytics
           </a>
         </li>
