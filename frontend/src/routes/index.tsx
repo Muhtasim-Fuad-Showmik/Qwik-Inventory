@@ -12,8 +12,10 @@ export default component$(() => {
   return (
     <div class="w-100 h-100">
       <div className="p-10">
-        <p class="greeting">Hey Fuad!</p>
-        <h1>Overview</h1>
+        <div className="title-block">
+          <p class="greeting">Hey Fuad!</p>
+          <h1>Overview</h1>
+        </div>
       </div>
 
       <div className="row">
@@ -125,10 +127,6 @@ export default component$(() => {
           </div>
         </ContentCard>
       </div>
-
-      <Link class="btn standard" href="/flower">
-        Sample Button
-      </Link>
     </div>
   );
 });

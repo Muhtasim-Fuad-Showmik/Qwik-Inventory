@@ -5,11 +5,11 @@ export default component$(() => {
   return (
     <>
       <main className="h-90vh">
-        <div className="d-flex flex-direction-row h-100">
-          <div className="leftPane h-100">
+        <div className="d-flex flex-direction-row hm-100">
+          <div className="leftPane hm-100">
             <Header />
           </div>
-          <div className="rightPane h-100">
+          <div className="rightPane hm-100">
             <section>
               <Slot />
             </section>
