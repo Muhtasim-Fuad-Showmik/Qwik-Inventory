@@ -7,12 +7,12 @@
  */
 
 :root {
-  --qwik-dark-blue: #006ce9;
-  --qwik-light-blue: #18b6f6;
-  --qwik-light-purple: #ac7ff4;
-  --qwik-dark-purple: #713fc2;
+  --brandeis-blue: #006ce9;
+  --spiro-disco-ball: #18b6f6;
+  --lavender: #ac7ff4;
+  --plump-purple: #713fc2;
   --selective-yellow: #ffb703;
-  --mughal-green: #31572c;
+  --caribbean-green: #02c39a;
 }
 
 body {
@@ -27,7 +27,7 @@ main {
   margin: 0 auto;
   background-color: white;
   border-radius: 5px;
-  box-shadow: 0px 0px 130px -50px var(--qwik-dark-blue);
+  box-shadow: 0px 0px 130px -50px var(--brandeis-blue);
   overflow: hidden;
 }
 
@@ -43,7 +43,7 @@ p {
 section {
   padding: 20px;
   min-height: calc(100% - 50px);
-  border-bottom: 10px solid var(--qwik-dark-blue);
+  border-bottom: 10px solid var(--brandeis-blue);
 }
 
 ul {
@@ -57,12 +57,12 @@ li {
 }
 
 li::marker {
-  color: var(--qwik-light-blue);
+  color: var(--spiro-disco-ball);
 }
 
 a,
 a:visited {
-  color: var(--qwik-dark-blue);
+  color: var(--brandeis-blue);
 }
 
 a:hover {
@@ -186,11 +186,11 @@ footer a:hover {
 }
 
 .btn.primary {
-  background: var(--qwik-dark-blue);
+  background: var(--brandeis-blue);
 }
 
 .btn.secondary {
-  background: var(--mughal-green);
+  background: var(--caribbean-green);
 }
 
 .btn:hover {

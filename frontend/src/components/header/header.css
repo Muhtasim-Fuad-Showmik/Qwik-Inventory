@@ -6,7 +6,7 @@ header {
 }
 
 header .logo {
-  background: var(--qwik-dark-blue);
+  background: var(--brandeis-blue);
 }
 
 header .logo a {
@@ -24,7 +24,7 @@ header ul {
   list-style: none;
   flex: 1;
   text-align: left;
-  background-color: var(--qwik-dark-blue);
+  background-color: var(--brandeis-blue);
   border-radius: 0px 10px;
 }
 
