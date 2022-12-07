@@ -1,6 +1,5 @@
 import { component$, useRef } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-import { Link } from "@builder.io/qwik-city";
 import Card from "../components/card/card";
 import ContentCard from "../components/contentCard/contentCard";
 import ChartJSGraph from "../components/chartJSGraph/chartJSGraph";
@@ -11,14 +10,14 @@ export default component$(() => {
 
   return (
     <div class="w-100 h-100">
-      <div className="p-10">
+      <div className="p-10 distinct row">
         <div className="title-block">
           <p class="greeting">Hey Fuad!</p>
           <h1>Overview</h1>
         </div>
       </div>
 
-      <div className="row">
+      <div className="row p-10">
         <Card
           style="w-30"
           title="Order Insights"
@@ -68,7 +67,7 @@ export default component$(() => {
         <h1>Report</h1>
       </div>
 
-      <div className="row">
+      <div className="row p-10">
         <select class="standard-select">
           <option>Last 7 days</option>
           <option>Last month</option>
@@ -78,7 +77,7 @@ export default component$(() => {
         
       </div>
 
-      <div className="row">
+      <div className="row p-10">
         <ContentCard
           style="w-47"
           title="Inventory Value per Outlet"
