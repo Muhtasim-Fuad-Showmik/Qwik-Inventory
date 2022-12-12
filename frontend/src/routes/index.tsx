@@ -74,7 +74,6 @@ export default component$(() => {
           <option>Last 6 months</option>
           <option>Last year</option>
         </select>
-        
       </div>
 
       <div className="row p-10">

@@ -24,6 +24,33 @@ export default component$(() => {
           <i class="fa-solid fa-magnifying-glass"></i>
           <input type="text" placeholder="Search" />
         </div>
+
+        <div className="gap">
+          <select class="standard-select">
+            <option>Date</option>
+            <option>Latest</option>
+            <option>Oldest</option>
+          </select>
+
+          <select class="standard-select">
+            <option>Sales Channel</option>
+            <option>122 A</option>
+            <option>123 B</option>
+            <option>124 C</option>
+          </select>
+
+          <select class="standard-select">
+            <option>Status</option>
+            <option>Pending</option>
+            <option>Closed</option>
+          </select>
+          
+          <select class="standard-select">
+            <option>More Filters</option>
+            <option>International</option>
+            <option>Domestic</option>
+          </select>
+        </div>
       </div>
     </div>
   );
