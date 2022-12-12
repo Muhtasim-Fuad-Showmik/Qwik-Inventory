@@ -1,6 +1,7 @@
 import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import { DocumentHead } from '@builder.io/qwik-city';
 import styles from './procurement.css?inline';
+import AccordionTable from "../../components/accordionTable/accordionTable";
 
 export default component$(() => {
     useStylesScoped$(styles);
@@ -51,6 +52,10 @@ export default component$(() => {
             <option>Domestic</option>
           </select>
         </div>
+      </div>
+
+      <div className="row p-10">
+        <AccordionTable/>
       </div>
     </div>
   );

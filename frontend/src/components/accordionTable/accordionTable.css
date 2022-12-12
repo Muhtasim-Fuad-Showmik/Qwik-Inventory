@@ -1,0 +1,72 @@
+.circle {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--brandeis-blue);
+    border-bottom: 3px solid black;
+    transition: all 0.05s ease-in;
+}
+
+.circle:hover {
+    border-bottom-width: 0px;
+    transform: translateY(3px);
+    cursor: pointer;
+}
+
+.circle i {
+    color: white;
+}
+
+.table {
+    width: 100%;
+    text-align: left;
+}
+
+.table td,
+.table th  {
+    padding: 10px;
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+td.orderId {
+    font-weight: bold;
+    color: var(--brandeis-blue);
+}
+
+.status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    padding: 5px 20px 5px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.status .dot {
+    display: flex;
+    align-items: center;
+}
+
+.status .dot .fa-circle {
+    font-size: 6px;
+    margin-right: 5px;
+}
+
+.status.pending {
+    background-color: #e5f01a;
+    color: #808000;
+}
+
+.status.fulfilled {
+    background-color: #9ef01a;
+    color: #008000;
+}
+
+.status.unfulfilled {
+    background-color: #ffccd5;
+    color: #c9184a;
+}
