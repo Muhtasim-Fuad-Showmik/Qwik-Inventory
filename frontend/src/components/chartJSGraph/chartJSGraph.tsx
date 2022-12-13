@@ -1,36 +1,35 @@
-import { component$, useMount$, Ref, useStylesScoped$ } from "@builder.io/qwik";
+import { component$, useMount$, useStylesScoped$ } from "@builder.io/qwik";
 import styles from "./chartJSGraph.css?inline";
-import { Chart } from 'chart.js/auto';
+import { ChartJS, ChartJSBarChart } from '~/integrations/react/mui';
 
 interface GraphProps {
-  data: object[];
-  reference: Ref<Element>;
+  chartData: object;
 }
 
 export default component$((props: GraphProps) => {
   useStylesScoped$(styles);
 
   useMount$(() => {
-    new Chart(
-      props.reference,
-      {
-        type: 'bar',
-        data: {
-          labels: props.data.map(row => Object.values(row)[0] ),
-          datasets: [
-            {
-              label: 'Acquisitions by year',
-              data: props.data.map(row => Object.values(row)[1])
-            }
-          ]
-        }
-      }
-    );
   });
 
   return (
-    <div id="chartContent">
-      Graph Placeholder
-    </div>
+    <>
+      {/* <ChartJSBarChart
+        datasetIdKey='id'
+        data={props.chartData}
+        options={
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'top' as const,
+            },
+            title: {
+              display: true,
+              text: 'Chart.js Bar Chart',
+            },
+          }
+        }
+      /> */}
+    </>
   );
 });

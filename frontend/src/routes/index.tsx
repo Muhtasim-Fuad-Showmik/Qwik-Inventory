@@ -1,12 +1,59 @@
-import { component$, useRef } from "@builder.io/qwik";
+import { component$,  useMount$, useSignal } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import Card from "../components/card/card";
 import ContentCard from "../components/contentCard/contentCard";
 import ChartJSGraph from "../components/chartJSGraph/chartJSGraph";
 
 export default component$(() => {
-  const leftChartContainer = useRef();
-  const rightChartContainer = useRef();
+  const chartData1 = useSignal({
+    "labels": [
+      { id: 1, year: 2010, count: 10 },
+      { id: 2, year: 2011, count: 20 },
+      { id: 3, year: 2012, count: 15 },
+      { id: 4, year: 2013, count: 25 },
+      { id: 5, year: 2014, count: 22 },
+      { id: 6, year: 2015, count: 30 }
+  ].map((data) => data.year),
+  "datasets": [
+    {
+      "label": "Orders",
+      "data": [
+        { id: 1, year: 2010, count: 10 },
+        { id: 2, year: 2011, count: 20 },
+        { id: 3, year: 2012, count: 15 },
+        { id: 4, year: 2013, count: 25 },
+        { id: 5, year: 2014, count: 22 },
+        { id: 6, year: 2015, count: 30 }
+    ].map((data) => data.count),
+    "backgroundColor": [
+      "rgba(75,192,192,1)",
+      "#ecf0f1",
+      "#50AF95",
+      "#f3ba2f",
+      "#2a71d0",
+      "#2f7fd0",
+    ],
+    "borderColor": "black",
+    "borderWidth": 2
+    }
+  ]
+  });
+
+  const chartData2 = useSignal({
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    datasets: [
+      {
+        label: 'Dataset 1',
+        data: [12, 14, 15, 16, 18, 23, 24],
+        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+      },
+      {
+        label: 'Dataset 2',
+        data: [12, 14, 15, 16, 18, 23, 24],
+        backgroundColor: 'rgba(53, 162, 235, 0.5)',
+      },
+    ]
+  });
 
   return (
     <div class="w-100 h-100">
@@ -87,16 +134,7 @@ export default component$(() => {
 
           <div className="graph-container">
             <ChartJSGraph
-              data={[
-                { year: 2010, count: 10 },
-                { year: 2011, count: 20 },
-                { year: 2012, count: 15 },
-                { year: 2013, count: 25 },
-                { year: 2014, count: 22 },
-                { year: 2015, count: 30 },
-                { year: 2016, count: 28 },
-              ]}
-              reference={leftChartContainer}
+              chartData={chartData2.value}
             />
           </div>
         </ContentCard>
@@ -111,16 +149,7 @@ export default component$(() => {
 
           <div className="graph-container">
             <ChartJSGraph
-              data={[
-                  { year: 2010, count: 10 },
-                  { year: 2011, count: 20 },
-                  { year: 2012, count: 15 },
-                  { year: 2013, count: 25 },
-                  { year: 2014, count: 22 },
-                  { year: 2015, count: 30 },
-                  { year: 2016, count: 28 },
-                ]}
-              reference={rightChartContainer}
+              chartData={chartData2.value}
             />
           </div>
         </ContentCard>
