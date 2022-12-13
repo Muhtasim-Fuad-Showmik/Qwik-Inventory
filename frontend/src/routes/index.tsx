@@ -6,53 +6,25 @@ import ChartJSGraph from "../components/chartJSGraph/chartJSGraph";
 
 export default component$(() => {
   const chartData1 = useSignal({
-    "labels": [
-      { id: 1, year: 2010, count: 10 },
-      { id: 2, year: 2011, count: 20 },
-      { id: 3, year: 2012, count: 15 },
-      { id: 4, year: 2013, count: 25 },
-      { id: 5, year: 2014, count: 22 },
-      { id: 6, year: 2015, count: 30 }
-  ].map((data) => data.year),
-  "datasets": [
-    {
-      "label": "Orders",
-      "data": [
-        { id: 1, year: 2010, count: 10 },
-        { id: 2, year: 2011, count: 20 },
-        { id: 3, year: 2012, count: 15 },
-        { id: 4, year: 2013, count: 25 },
-        { id: 5, year: 2014, count: 22 },
-        { id: 6, year: 2015, count: 30 }
-    ].map((data) => data.count),
-    "backgroundColor": [
-      "rgba(75,192,192,1)",
-      "#ecf0f1",
-      "#50AF95",
-      "#f3ba2f",
-      "#2a71d0",
-      "#2f7fd0",
-    ],
-    "borderColor": "black",
-    "borderWidth": 2
-    }
-  ]
+    labels: ["January", "February", "March", "April", "May", "June", "July"],
+    datasets: [{
+      label: 'Inventory Value per Outlet',
+      data: [65, 59, 80, 81, 56, 55, 40],
+      fill: false,
+      borderColor: 'rgb(75, 192, 192)',
+      tension: 0.1
+    }]
   });
 
   const chartData2 = useSignal({
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-    datasets: [
-      {
-        label: 'Dataset 1',
-        data: [12, 14, 15, 16, 18, 23, 24],
-        backgroundColor: 'rgba(255, 99, 132, 0.5)',
-      },
-      {
-        label: 'Dataset 2',
-        data: [12, 14, 15, 16, 18, 23, 24],
-        backgroundColor: 'rgba(53, 162, 235, 0.5)',
-      },
-    ]
+    labels: ["January", "February", "March", "April", "May", "June", "July"],
+    datasets: [{
+      label: 'Monthly Order Value per Outlet',
+      data: [23, 37, 42, 43, 30, 65, 72],
+      fill: false,
+      borderColor: 'rgb(0, 108, 233)',
+      tension: 0.1
+    }]
   });
 
   return (
@@ -135,6 +107,8 @@ export default component$(() => {
 
           <div className="graph-container">
             <ChartJSGraph
+              width={'100%'}
+              height={'25px'}
               chartData={chartData1.value}
             />
           </div>
@@ -150,6 +124,8 @@ export default component$(() => {
 
           <div className="graph-container">
             <ChartJSGraph
+              width={'100%'}
+              height={'25px'}
               chartData={chartData2.value}
             />
           </div>
