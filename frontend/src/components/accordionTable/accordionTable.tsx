@@ -2,7 +2,7 @@ import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import styles from "./accordionTable.css?inline";
 
 interface accordionTableProps {
-  content: object;
+  content?: object;
 }
 
 export default component$((props: accordionTableProps) => {

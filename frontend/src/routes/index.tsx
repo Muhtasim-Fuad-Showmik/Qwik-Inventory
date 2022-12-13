@@ -1,4 +1,4 @@
-import { component$,  useMount$, useSignal } from "@builder.io/qwik";
+import { component$, useSignal } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import Card from "../components/card/card";
 import ContentCard from "../components/contentCard/contentCard";
@@ -121,6 +121,7 @@ export default component$(() => {
           <option>Last 6 months</option>
           <option>Last year</option>
         </select>
+
       </div>
 
       <div className="row p-10">
@@ -134,7 +135,7 @@ export default component$(() => {
 
           <div className="graph-container">
             <ChartJSGraph
-              chartData={chartData2.value}
+              chartData={chartData1.value}
             />
           </div>
         </ContentCard>

@@ -45,7 +45,9 @@
     "vite-tsconfig-paths": "3.5.0"
   },
   "dependencies": {
+    "@mui/x-date-pickers": "^5.0.10",
     "chart.js": "^4.0.1",
+    "dayjs": "^1.11.7",
     "react-chartjs-2": "^5.0.1"
   }
 }

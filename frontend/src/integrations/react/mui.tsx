@@ -1,31 +1,32 @@
 /** @jsxImportSource react */
 
 import { qwikify$ } from '@builder.io/qwik-react';
-import { Button, Slider } from '@mui/material';
+import { Button, Slider, TextField } from '@mui/material';
 import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
-import {
-  Chart,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend,
-} from 'chart.js';
-Chart.register(
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend
-);
-import { Bar } from 'react-chartjs-2';
+import dayjs from 'dayjs';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
-export const ChartJS = qwikify$(Chart);
-export const ChartJSBarChart = qwikify$(Bar);
 export const MUIButton = qwikify$(Button);
 export const MUISlider = qwikify$(Slider, { eagerness: 'hover' });
+
+export const MUIDatePicker = qwikify$(() => {
+  return (
+    <>
+      <LocalizationProvider dateAdapter={AdapterDayjs}>
+        <DatePicker
+          value={dayjs()}
+          onChange={(newValue) => {
+            // dateValue = newValue;
+            console.log(newValue);
+          }}
+          renderInput={(params) => <TextField {...params} />}
+        />
+      </LocalizationProvider>
+    </>
+  );
+});
 
 export const TableApp = qwikify$(() => {
   const columns: GridColDef[] = [
